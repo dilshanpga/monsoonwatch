@@ -1,4 +1,0 @@
-season,days,heavy_days,recall,precision,pr_auc
-Inter-monsoon,2745.0,199.0,0.583,0.273,0.262
-NE monsoon (Dec-Feb),2235.0,101.0,0.366,0.234,0.194
-SW monsoon (May-Sep),3000.0,123.0,0.439,0.278,0.252
