@@ -14,7 +14,7 @@ import itertools
 import json
 import time
 
-import joblib
+import pickle
 import numpy as np
 import pandas as pd
 from interpret.glassbox import ExplainableBoostingClassifier
@@ -126,7 +126,8 @@ def main(quick: bool):
                                 "valid_roc_auc": round(roc_auc_score(valid[TARGET], p), 4),
                                 "fit_seconds": round(secs, 1)}
         fname = name.split(" (")[0].lower().replace(" ", "_")
-        joblib.dump(model, MODEL_DIR / f"{fname}.joblib", compress=3)
+        with open(MODEL_DIR / f"{fname}.pkl", "wb") as fh:  # saved with pickle
+            pickle.dump(model, fh)
         print(name, meta["models"][name], flush=True)
 
     (MODEL_DIR / "model_meta.json").write_text(json.dumps(meta, indent=2))

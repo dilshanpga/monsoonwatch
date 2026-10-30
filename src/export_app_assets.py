@@ -16,7 +16,7 @@ ASSETS = APP / "assets"
 
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
-    shutil.copy(MODEL_DIR / "ebm.joblib", ASSETS / "ebm.joblib")
+    shutil.copy(MODEL_DIR / "ebm.pkl", ASSETS / "ebm.pkl")
     meta = json.loads((MODEL_DIR / "model_meta.json").read_text())
     test = pd.read_csv(PROCESSED_DIR / "test.csv", dtype={"weathercode": str})
 

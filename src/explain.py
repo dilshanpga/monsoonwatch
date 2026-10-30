@@ -12,7 +12,7 @@ Run:  python src/explain.py
 import json
 import warnings
 
-import joblib
+import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -234,8 +234,10 @@ def main():
     train = pd.read_csv(PROCESSED_DIR / "train.csv", dtype={"weathercode": str}, parse_dates=["date"])
     test = pd.read_csv(PROCESSED_DIR / "test.csv", dtype={"weathercode": str}, parse_dates=["date"])
     meta = json.loads((MODEL_DIR / "model_meta.json").read_text())
-    ebm = joblib.load(MODEL_DIR / "ebm.joblib")
-    lgbm = joblib.load(MODEL_DIR / "lightgbm.joblib")
+    with open(MODEL_DIR / "ebm.pkl", "rb") as fh:
+        ebm = pickle.load(fh)
+    with open(MODEL_DIR / "lightgbm.pkl", "rb") as fh:
+        lgbm = pickle.load(fh)
 
     imp = plot_importance(ebm)
     plot_shapes(ebm, ["rain_7d", "month", "wind_dir", "radiation", "rain_today", "elevation"])

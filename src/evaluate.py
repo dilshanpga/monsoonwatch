@@ -7,7 +7,7 @@ Run:  python src/evaluate.py
 """
 import json
 
-import joblib
+import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -43,7 +43,8 @@ def main():
 
     probs, rows = {}, []
     for name, f in FILES.items():
-        model = joblib.load(MODEL_DIR / f"{f}.joblib")
+        with open(MODEL_DIR / f"{f}.pkl", "rb") as fh:
+            model = pickle.load(fh)
         probs[name] = model.predict_proba(test[FEATURES])[:, 1]
         m = metrics(y, probs[name], meta["models"][name]["threshold"])
         rows.append({"Model": name, **{k: round(v, 4) for k, v in m.items()}})

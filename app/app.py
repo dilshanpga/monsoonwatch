@@ -9,7 +9,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 import altair as alt
-import joblib
+import pickle
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -27,7 +27,8 @@ st.set_page_config(page_title="MonsoonWatch", page_icon="🌧️", layout="wide"
 
 @st.cache_resource
 def load_model():
-    return joblib.load(ASSETS / "ebm.joblib")
+    with open(ASSETS / "ebm.pkl", "rb") as fh:
+        return pickle.load(fh)
 
 
 @st.cache_data
