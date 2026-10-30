@@ -6,8 +6,7 @@ Machine** (InterpretML), explains every prediction, and serves it through a
 **Streamlit** web app where users enter today's weather and see the prediction
 and its explanation.
 
-- **Live app (Azure App Service):** LIVE_URL_PLACEHOLDER
-- **Repository:** <https://github.com/dilshanpga/monsoonwatch>
+-  **Live app (Azure App Service):** <https://monsoonwatch-dilshan-bfgpghhqh7h4eugc.eastasia-01.azurewebsites.net/>
 
 ## Run the app on your own computer
 
