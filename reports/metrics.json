@@ -1,0 +1,83 @@
+{
+  "test_rows": 7980,
+  "test_heavy_rate": 0.05300751879699248,
+  "ebm_confusion_matrix": {
+    "tn": 6987,
+    "fp": 570,
+    "fn": 216,
+    "tp": 207
+  },
+  "comparison": [
+    {
+      "Model": "EBM (proposed)",
+      "ROC-AUC": 0.8525,
+      "PR-AUC": 0.2354,
+      "F1": 0.345,
+      "Precision": 0.2664,
+      "Recall": 0.4894,
+      "Accuracy": 0.9015,
+      "Balanced acc.": 0.707,
+      "Brier": 0.0446,
+      "Threshold": 0.1557,
+      "ROC-AUC 95% CI": "0.836-0.868",
+      "PR-AUC 95% CI": "0.205-0.275"
+    },
+    {
+      "Model": "Logistic Regression",
+      "ROC-AUC": 0.8361,
+      "PR-AUC": 0.204,
+      "F1": 0.315,
+      "Precision": 0.2233,
+      "Recall": 0.5343,
+      "Accuracy": 0.8768,
+      "Balanced acc.": 0.7151,
+      "Brier": 0.0461,
+      "Threshold": 0.1415,
+      "ROC-AUC 95% CI": "0.818-0.854",
+      "PR-AUC 95% CI": "0.178-0.236"
+    },
+    {
+      "Model": "Random Forest",
+      "ROC-AUC": 0.8438,
+      "PR-AUC": 0.2037,
+      "F1": 0.3037,
+      "Precision": 0.2307,
+      "Recall": 0.4444,
+      "Accuracy": 0.892,
+      "Balanced acc.": 0.6807,
+      "Brier": 0.0455,
+      "Threshold": 0.1579,
+      "ROC-AUC 95% CI": "0.825-0.860",
+      "PR-AUC 95% CI": "0.177-0.235"
+    },
+    {
+      "Model": "LightGBM",
+      "ROC-AUC": 0.8432,
+      "PR-AUC": 0.2102,
+      "F1": 0.2989,
+      "Precision": 0.2423,
+      "Recall": 0.3901,
+      "Accuracy": 0.903,
+      "Balanced acc.": 0.6609,
+      "Brier": 0.046,
+      "Threshold": 0.1519,
+      "ROC-AUC 95% CI": "0.827-0.861",
+      "PR-AUC 95% CI": "0.182-0.244"
+    },
+    {
+      "Model": "Persistence (heavy today -> heavy tomorrow)",
+      "F1": 0.222,
+      "Precision": 0.2217,
+      "Recall": 0.2222,
+      "Accuracy": 0.9174,
+      "Balanced acc.": 0.5893
+    },
+    {
+      "Model": "Always 'no heavy rain'",
+      "Accuracy": 0.947,
+      "F1": 0.0,
+      "Recall": 0.0,
+      "Balanced acc.": 0.5
+    }
+  ]
+}

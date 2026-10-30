@@ -1,0 +1,3 @@
+PR-AUC gain of EBM over Logistic Regression: 0.032 (95% CI 0.012 to 0.054)
+PR-AUC gain of EBM over Random Forest: 0.032 (95% CI 0.017 to 0.049)
+PR-AUC gain of EBM over LightGBM: 0.025 (95% CI 0.011 to 0.041)

@@ -1,0 +1,31 @@
+city,latitude,longitude,elevation,grid_city
+Athurugiriya,6.9,79.9,27.0,Gampaha
+Badulla,7.1,81.1,652.0,Badulla
+Bentota,6.5,80.0,10.0,Colombo
+Colombo,7.0,79.9,16.0,Colombo
+Galle,6.1,80.2,15.0,Galle
+Gampaha,7.1,80.0,15.0,Gampaha
+Hambantota,6.2,81.2,12.0,Hambantota
+Hatton,6.9,80.6,1281.0,Hatton
+Jaffna,9.7,80.0,5.0,Jaffna
+Kalmunai,7.4,81.8,8.0,Kalmunai
+Kalutara,6.6,80.0,0.0,Colombo
+Kandy,7.3,80.6,510.0,Kandy
+Kesbewa,6.8,79.9,18.0,Colombo
+Kolonnawa,6.9,79.9,13.0,Gampaha
+Kurunegala,7.5,80.4,124.0,Kurunegala
+Mabole,7.0,79.9,16.0,Gampaha
+Maharagama,6.8,79.9,26.0,Colombo
+Mannar,8.9,80.0,6.0,Mannar
+Matale,7.6,80.6,376.0,Matale
+Matara,6.0,80.4,7.0,Galle
+Moratuwa,6.8,79.9,9.0,Colombo
+Mount Lavinia,6.9,79.9,10.0,Colombo
+Negombo,7.1,79.9,5.0,Gampaha
+Oruwala,6.9,80.0,20.0,Gampaha
+Pothuhera,7.4,80.3,125.0,Kurunegala
+Puttalam,8.0,79.8,0.0,Puttalam
+Ratnapura,6.8,80.3,27.0,Ratnapura
+Sri Jayewardenepura Kotte,6.9,79.9,7.0,Gampaha
+Trincomalee,8.6,81.2,7.0,Trincomalee
+Weligama,6.0,80.4,5.0,Galle

@@ -1,0 +1,37 @@
+{
+  "ebm_params": {
+    "interactions": 20,
+    "learning_rate": 0.02,
+    "max_leaves": 2
+  },
+  "models": {
+    "EBM (proposed)": {
+      "threshold": 0.1557315771720918,
+      "valid_f1": 0.356,
+      "valid_pr_auc": 0.2868,
+      "valid_roc_auc": 0.8585,
+      "fit_seconds": 42.8
+    },
+    "Logistic Regression": {
+      "threshold": 0.1414992244900701,
+      "valid_f1": 0.3482,
+      "valid_pr_auc": 0.2617,
+      "valid_roc_auc": 0.8591,
+      "fit_seconds": 0.2
+    },
+    "Random Forest": {
+      "threshold": 0.1578940740571043,
+      "valid_f1": 0.3555,
+      "valid_pr_auc": 0.2842,
+      "valid_roc_auc": 0.8559,
+      "fit_seconds": 12.3
+    },
+    "LightGBM": {
+      "threshold": 0.151924333299836,
+      "valid_f1": 0.354,
+      "valid_pr_auc": 0.2755,
+      "valid_roc_auc": 0.861,
+      "fit_seconds": 1.6
+    }
+  }
+}

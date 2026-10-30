@@ -1,0 +1,64 @@
+{
+  "quality_checks": {
+    "rows": 147480,
+    "cities": 30,
+    "date_min": "2010-01-01",
+    "date_max": "2023-06-17",
+    "missing_values": 0,
+    "negative_rain": 0,
+    "tmin_above_tmax": 0,
+    "date_gaps": 0,
+    "cities_after_dedup": 15,
+    "rows_after_dedup": 73740,
+    "merged_duplicate_cities": {
+      "Gampaha": [
+        "Athurugiriya",
+        "Kolonnawa",
+        "Mabole",
+        "Negombo",
+        "Oruwala",
+        "Sri Jayewardenepura Kotte"
+      ],
+      "Colombo": [
+        "Bentota",
+        "Kalutara",
+        "Kesbewa",
+        "Maharagama",
+        "Moratuwa",
+        "Mount Lavinia"
+      ],
+      "Galle": [
+        "Matara",
+        "Weligama"
+      ],
+      "Kurunegala": [
+        "Pothuhera"
+      ]
+    }
+  },
+  "modelling_rows": 73530,
+  "n_features": 23,
+  "categorical": [
+    "weathercode"
+  ],
+  "split": {
+    "train": {
+      "rows": 54585,
+      "from": "2010-01-14",
+      "to": "2019-12-31",
+      "heavy_rain_rate": 0.056
+    },
+    "valid": {
+      "rows": 10965,
+      "from": "2020-01-01",
+      "to": "2021-12-31",
+      "heavy_rain_rate": 0.0522
+    },
+    "test": {
+      "rows": 7980,
+      "from": "2022-01-01",
+      "to": "2023-06-16",
+      "heavy_rain_rate": 0.053
+    }
+  }
+}

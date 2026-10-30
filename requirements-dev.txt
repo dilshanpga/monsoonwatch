@@ -1,0 +1,7 @@
+# Everything needed to re-run the full pipeline (data prep -> training -> evaluation -> XAI)
+-r requirements.txt
+interpret==0.7.8
+lightgbm
+shap==0.54.1
+matplotlib
+jupyter
