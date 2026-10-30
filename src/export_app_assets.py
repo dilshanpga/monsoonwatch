@@ -44,7 +44,7 @@ def main():
     (ASSETS / "model_info.json").write_text(json.dumps(info, indent=2))
     for fig in ["roc_pr_curves.png", "calibration.png", "recall_by_city.png"]:
         shutil.copy(RESULTS_DIR / "figures" / fig, ASSETS / fig)
-    print("App assets written to", ASSETS)
+    print("App assets written to", ASSETS.relative_to(ROOT))
 
 
 if __name__ == "__main__":

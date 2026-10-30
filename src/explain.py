@@ -10,6 +10,7 @@
 Run:  python src/explain.py
 """
 import json
+import warnings
 
 import joblib
 import matplotlib.pyplot as plt
@@ -20,6 +21,9 @@ from scipy.stats import spearmanr
 
 import plot_style as ps
 from config import FEATURES, FIG_DIR, LABELS, MODEL_DIR, PROCESSED_DIR, RANDOM_STATE, RESULTS_DIR, TARGET
+
+# shap notes that LightGBM's TreeExplainer output format changed; handled in run_shap()
+warnings.filterwarnings("ignore", message="LightGBM binary classifier with TreeExplainer")
 
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
 
@@ -251,7 +255,11 @@ def main():
         "local_cases": cases,
     }
     (RESULTS_DIR / "explanations.json").write_text(json.dumps(out, indent=2))
-    print(json.dumps({k: v for k, v in out.items() if k != "pdp"}, indent=2)[:4000])
+    top5 = ", ".join(LABELS[t] if t in LABELS else t for t in list(imp.index[:5]))
+    print(f"Top-5 EBM terms: {top5}")
+    print(f"SHAP rank agreement EBM vs LightGBM (Spearman rho): {rho:.2f}")
+    print(f"Figures written to {FIG_DIR.relative_to(FIG_DIR.parents[1])}/; "
+          f"details in reports/explanations.json")
 
 
 if __name__ == "__main__":
