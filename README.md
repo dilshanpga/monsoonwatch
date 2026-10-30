@@ -23,9 +23,13 @@ The first run installs the packages (3–5 minutes). The app then opens at
 ```bash
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app/app.py
+python -m pip install -r requirements.txt
+python -m streamlit run app/app.py
 ```
+
+On Windows with Smart App Control, always call tools as `python -m pip` and
+`python -m streamlit`; the small `pip.exe` / `streamlit.exe` launchers can be
+blocked by Application Control.
 
 **Test results (Jan 2022 – Jun 2023, never used for training or tuning)**
 
@@ -67,13 +71,13 @@ run_app.bat / .sh    one-click local launcher
 ## Reproduce
 
 ```bash
-pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
 python src/data_prep.py
 python src/train.py              # full search, ~5 min on 2 cores (--quick skips it)
 python src/evaluate.py
 python src/explain.py
 python src/export_app_assets.py
-streamlit run app/app.py
+python -m streamlit run app/app.py
 ```
 
 Python 3.12+ recommended. Seeds fixed at 42.

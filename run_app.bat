@@ -8,7 +8,7 @@ if not exist .venv (
     python -m venv .venv || (echo Python 3.12+ not found. Install it from python.org and try again. & pause & exit /b 1)
     call .venv\Scripts\activate.bat
     python -m pip install --upgrade pip
-    pip install -r requirements.txt || (echo Package install failed. & pause & exit /b 1)
+    python -m pip install -r requirements.txt || (echo Package install failed. & pause & exit /b 1)
 ) else (
     call .venv\Scripts\activate.bat
 )
