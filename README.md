@@ -59,8 +59,6 @@ models/              saved models + model_meta.json
 reports/             metrics, CSVs, figures, app screenshots
 notebooks/           walkthrough notebook (whole pipeline with outputs)
 app/app.py           Streamlit front-end
-DEPLOY_AZURE.md      step-by-step Azure deployment
-DEMO_VIDEO_SCRIPT.md 4½-minute demo narration
 run_app.bat / .sh    one-click local launcher
 ```
 
@@ -82,8 +80,7 @@ Python 3.12+ recommended. Seeds fixed at 42.
 
 The app runs on **Azure App Service** (Linux, Python 3.12, Basic B1). Azure's
 Deployment Center is connected to this repository, so every push to `main` is
-built and redeployed through GitHub Actions. Step-by-step setup:
-**DEPLOY_AZURE.md**.
+built and redeployed through GitHub Actions.
 
 *Student project — not an official forecast. Follow the Department of
 Meteorology and the Disaster Management Centre for warnings.*
